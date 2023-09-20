@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Isometric Box Animation</title>
+
+    <link rel="stylesheet" href="assets/css/pagestyle.css">
+    <link rel="stylesheet" href="assets/css/isometricbox.css">
+</head>
+<body>
+
+    <div id="container">
+        <svg viewBox="0 0 1080 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+            
+            <path id="contour" d="M68.159,235.921L68.159,844.079L540,1080L1011.84,844.079L1011.84,235.921L540,0L68.159,235.921Z"/>
+
+            <g id="box3">
+                <path id="box-top3" d="M540,449.917L153.888,642.973L540,836.029L926.112,642.973L540,449.917Z"/>
+                <path id="box-front3" d="M926.112,642.973L540,836.029L540,981.887L926.112,788.831L926.112,642.973Z"/>
+                <path id="box-side3" d="M540,836.029L153.888,642.973L153.888,788.831L540,981.887L540,836.029Z"/>
+                <path id="mask3" d="M153.888,642.973L153.888,788.831L540,981.887L926.112,788.831L926.112,642.973L540,449.917L153.888,642.973Z"/>
+            </g>
+
+            <g id="box2">
+                <path id="box-top2" d="M540,274.015L153.888,467.071L540,660.127L926.112,467.071L540,274.015Z"/>
+                <path id="box-front2" d="M926.112,467.071L540,660.127L540,805.985L926.112,612.929L926.112,467.071Z"/>
+                <path id="box-side2" d="M540,660.127L153.888,467.071L153.888,612.929L540,805.985L540,660.127Z"/>
+                <path id="mask2" d="M153.888,467.071L153.888,612.929L540,805.985L926.112,612.929L926.112,467.071L540,274.015L153.888,467.071Z"/>
+            </g>
+
+            <g id="box1">
+                <path id="box-top1" d="M540,98.113L153.888,291.169L540,484.225L926.112,291.169L540,98.113Z"/>
+                <path id="box-front1" d="M926.112,291.169L540,484.225L540,630.083L926.112,437.027L926.112,291.169Z"/>
+                <path id="box-side1" d="M540,484.225L153.888,291.169L153.888,437.027L540,630.083L540,484.225Z"/>
+                <path id="mask1" d="M153.888,291.169L153.888,437.027L540,630.083L926.112,437.027L926.112,291.169L540,98.113L153.888,291.169Z"/>
+            </g>
+
+            
+            
+            <defs>
+
+                <linearGradient id="top-gradient-box1" x1="0" y1="0" x2="0" y2="100%">
+                    <stop offset="0%" stop-color="#757575"/>
+                    <stop offset="100%" stop-color="#A7A7A7"/>
+                </linearGradient>
+
+                <linearGradient id="top-gradient" x1="0" y1="0" x2="0" y2="100%">
+                    <stop offset="0%" stop-color="#555"/>
+                    <stop offset="100%" stop-color="#A7A7A7"/>
+                </linearGradient>
+
+                <linearGradient id="side-gradient" x1="0" y1="100%" x2="100%" y2="0">
+                    <stop offset="0%" stop-color="#555"/>
+                    <stop offset="100%" stop-color="#A7A7A7"/>
+                </linearGradient>
+
+                <linearGradient id="front-gradient" x1="100%" y1="100%" x2="0" y2="0">
+                    <stop offset="0%" stop-color="#555"/>
+                    <stop offset="100%" stop-color="#A7A7A7"/>
+                </linearGradient>
+            </defs>
+        </svg>
+
+    </div>
+
+    <!-- <script>
+        const contourPath = document.getElementById('contour')
+        const contourLength = contourPath.getTotalLength()
+        alert(contourLength)
+    </script> -->
+
+</body>
+</html>

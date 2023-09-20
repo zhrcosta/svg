@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Icon Animation</title>
+    <style>
+        :root{
+            --container-dim: 60px;
+            --time-movement: 0.5s;
+            --movement-delay: calc(var(--time-movement) / 3);
+            --bg-color1: #12182b;
+            --bg-color2: #262c47;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: linear-gradient(var(--bg-color1), var(--bg-color2));
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #container{
+            width: var(--container-dim);
+            height: var(--container-dim);
+        }
+        svg{
+            transform: scale(6);
+        }
+        .inner_squares{
+            fill: #C1B9AE;
+            opacity: 1;
+            filter: drop-shadow(30px 30px 20px rgba(20, 20, 20, 0.3));
+        }
+
+        #square1{
+            fill: #FA8D70;
+        }
+        #square9{
+            fill: #FA8D70;
+        }
+        #square3{
+            fill: #FCC666;
+        }
+        #square7{
+            fill: #FCC666;
+        }
+
+
+        svg:hover #square1{
+            transform: translateX(60%);
+            transition: var(--time-movement) ease;
+        }
+        svg #square1{
+            transform: translateX(0%);
+            transition: var(--time-movement) ease;
+        }
+
+        svg:hover #square3{
+            transform: translateY(58%);
+            transition: var(--time-movement) ease;
+            transition-delay: calc(1 * var(--movement-delay));
+        }
+        svg #square3{
+            transform: translateY(0%);
+            transition: var(--time-movement) ease;
+            transition-delay: calc(1 * var(--movement-delay));
+        }
+        
+        svg:hover #square9{
+            transform: translateX(-60%);
+            transition: var(--time-movement) ease;
+            transition-delay: calc(2 * var(--movement-delay));
+        }
+        svg #square9{
+            transform: translateX(0%);
+            transition: var(--time-movement) ease;
+            transition-delay: calc(2 * var(--movement-delay));
+        }
+        
+        
+        svg:hover #square7{
+            transform: translateY(-58%);
+            transition: var(--time-movement) ease;
+            transition-delay: calc(3 * var(--movement-delay));
+        }
+        svg #square7{
+            transform: translateY(0%);
+            transition: var(--time-movement) ease;
+            transition-delay: calc(3 * var(--movement-delay));
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <svg width="100%" height="100%" viewBox="0 0 1024 1024">
+            <path class="inner_squares" id="square2" d="M647.529,146.345C647.529,109.274 617.478,79.223 580.407,79.223L443.593,79.223C406.522,79.223 376.471,109.274 376.471,146.345L376.471,283.159C376.471,320.229 406.522,350.281 443.593,350.281L580.407,350.281C617.478,350.281 647.529,320.229 647.529,283.159L647.529,146.345Z"/>
+            <path class="inner_squares" id="square4" d="M340.133,443.593C340.133,406.522 310.081,376.471 273.01,376.471L136.197,376.471C99.126,376.471 69.074,406.522 69.074,443.593L69.074,580.407C69.074,617.478 99.126,647.529 136.197,647.529L273.01,647.529C310.081,647.529 340.133,617.478 340.133,580.407L340.133,443.593Z"/>
+            <path class="inner_squares" id="square5" d="M647.529,443.593C647.529,406.522 617.478,376.471 580.407,376.471L443.593,376.471C406.522,376.471 376.471,406.522 376.471,443.593L376.471,580.407C376.471,617.478 406.522,647.529 443.593,647.529L580.407,647.529C617.478,647.529 647.529,617.478 647.529,580.407L647.529,443.593Z"/>
+            <path class="inner_squares" id="square6" d="M954.926,443.593C954.926,406.522 924.874,376.471 887.803,376.471L750.99,376.471C713.919,376.471 683.867,406.522 683.867,443.593L683.867,580.407C683.867,617.478 713.919,647.529 750.99,647.529L887.803,647.529C924.874,647.529 954.926,617.478 954.926,580.407L954.926,443.593Z"/>
+            <path class="inner_squares" id="square8" d="M647.529,740.841C647.529,703.771 617.478,673.719 580.407,673.719L443.593,673.719C406.522,673.719 376.471,703.771 376.471,740.841L376.471,877.655C376.471,914.726 406.522,944.777 443.593,944.777L580.407,944.777C617.478,944.777 647.529,914.726 647.529,877.655L647.529,740.841Z"/>
+            <path class="inner_squares" id="square3" d="M954.926,146.345C954.926,109.274 924.874,79.223 887.803,79.223L750.99,79.223C713.919,79.223 683.867,109.274 683.867,146.345L683.867,283.159C683.867,320.229 713.919,350.281 750.99,350.281L887.803,350.281C924.874,350.281 954.926,320.229 954.926,283.159L954.926,146.345Z"/>
+            <path class="inner_squares" id="square7" d="M340.133,740.841C340.133,703.771 310.081,673.719 273.01,673.719L136.197,673.719C99.126,673.719 69.074,703.771 69.074,740.841L69.074,877.655C69.074,914.726 99.126,944.777 136.197,944.777L273.01,944.777C310.081,944.777 340.133,914.726 340.133,877.655L340.133,740.841Z"/>
+            <path class="inner_squares" id="square1" d="M340.133,146.345C340.133,109.274 310.081,79.223 273.01,79.223L136.197,79.223C99.126,79.223 69.074,109.274 69.074,146.345L69.074,283.159C69.074,320.229 99.126,350.281 136.197,350.281L273.01,350.281C310.081,350.281 340.133,320.229 340.133,283.159L340.133,146.345Z"/>
+            <path class="inner_squares" id="square9" d="M954.926,740.841C954.926,703.771 924.874,673.719 887.803,673.719L750.99,673.719C713.919,673.719 683.867,703.771 683.867,740.841L683.867,877.655C683.867,914.726 713.919,944.777 750.99,944.777L887.803,944.777C924.874,944.777 954.926,914.726 954.926,877.655L954.926,740.841Z"/>
+        </svg>
+    </div>
+    
+</body>
+</html>

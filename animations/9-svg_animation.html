@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rotate Gradiente</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --star-stroke-color: #FCC666;
+            --stop-stroke-color: #ff7582;
+            --bg-color: #C1B9AE;
+        }
+        body{
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-color);
+        }
+
+        svg circle{
+            fill: transparent;
+            stroke: var(--star-stroke-color);
+            stroke-width: 8;
+            transition: 550ms;
+        }
+
+        svg:hover #c1{
+            stroke: var(--stop-stroke-color);
+            stroke-width: 15;
+            transition: 550ms;
+            r: 150;
+        }
+        svg:hover #c2{
+            stroke: var(--stop-stroke-color);
+            stroke-width: 15;
+            transition: 550ms;
+            r: 80;
+        }
+        svg:hover #c3{
+            stroke: var(--stop-stroke-color);
+            stroke-width: 15;
+            transition: 550ms;
+            r: 20;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <svg width="500" height="500">
+            <circle id="c1" cx="250" cy="250" r="200"/>
+            <circle id="c2" cx="250" cy="250" r="200"/>
+            <circle id="c3" cx="250" cy="250" r="200"/>
+        </svg>
+    </div>
+</body>
+</html>

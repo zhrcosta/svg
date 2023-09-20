@@ -1,0 +1,106 @@
+svg{
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+}
+:root{
+    --move-x-value: 220px;
+    --general-time-movment: 550ms;
+}
+
+#contour{
+    fill: none;
+    stroke: #30a0e3;
+    stroke-width: 56px;
+    stroke-dasharray: 3327;
+    stroke-dashoffset: 0;
+}
+
+#mask1{
+    mix-blend-mode: overlay;
+    fill: #ffc872;
+}
+#mask2{
+    mix-blend-mode: overlay;
+    fill: #30a0e3;
+}
+#mask3{
+    mix-blend-mode: overlay;
+    fill: #006bbb;
+}
+
+/* ------------------------- box 1 ------------------------- */
+#box-top1{
+    fill: url("#top-gradient-box1");
+}
+#box-side1{
+    fill: url("#side-gradient");
+}
+#box-front1{
+    fill: url("#front-gradient");
+}
+
+/* ------------------------- box 2 ------------------------- */
+#box-top2{
+    fill: url("#top-gradient");
+}
+#box-side2{
+    fill: url("#side-gradient");
+}
+#box-front2{
+    fill: url("#front-gradient");
+}
+
+/* ------------------------- box 3 ------------------------- */
+#box-top3{
+    fill: url("#top-gradient");
+}
+#box-side3{
+    fill: url("#side-gradient");
+}
+#box-front3{
+    fill: url("#front-gradient");
+}
+
+svg:hover #box1{
+    animation-name: box1Move;
+    animation-duration: var(--general-time-movment);
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+svg:hover #box3{
+    animation-name: box3Move;
+    animation-duration: var(--general-time-movment);
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+svg:hover #contour{
+    animation-name: contourAnimation;
+    animation-duration:var(--general-time-movment);
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+@keyframes contourAnimation{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dashoffset: 3327;
+    }
+}
+
+@keyframes box1Move {
+    to{
+        transform: translate(0, calc(var(--move-x-value) * -1));
+    }    
+}
+
+@keyframes box3Move {
+    to{
+        transform: translate(0, var(--move-x-value));
+    }
+}
+

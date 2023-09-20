@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rotate Gradiente</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        svg circle{
+            fill: url("#grd1");
+            stroke: white;
+            stroke-width: 2;
+            transition: 550ms;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <svg width="500" height="500">
+            <circle id="c1" cx="250" cy="250" r="200"/>
+
+            <defs>
+                
+                <linearGradient id="grd1" style="transform: rotate(120deg);">
+                    <stop offset="0%" stop-color="#4158D0"/>
+                    <!-- <stop offset="50%" stop-color="#C850C0"/> -->
+                    <stop offset="80%" stop-color="#FFCC70"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+</body>
+</html>
